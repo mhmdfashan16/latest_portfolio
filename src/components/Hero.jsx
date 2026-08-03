@@ -11,14 +11,14 @@ import {
 } from 'lucide-react'
 import assets from '../assets/assets'
 
-export default function Hero({ fadeUp }) {
+export default function Hero({ fadeUp, theme }) {
 
    
 
   return (
-    <section id="home" className="relative overflow-hidden px-4 pb-16 pt-28 sm:px-6 lg:px-8">
+    <section id="home" className="relative overflow-hidden px-4 pb-16 py-20 pt-28 sm:px-6 lg:px-8">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left, rgba(34,211,238,0.25),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.25),_transparent_30%)]"></div>
-      <div className="mx-auto flex-clo max-w-6xl items-center justify-between gap-10 sm:flex sm:gap-20 lg:gap-32">
+      <div className="mx-auto  max-w-6xl items-center justify-between gap-10 sm:flex sm:gap-20 lg:gap-32">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -26,17 +26,17 @@ export default function Hero({ fadeUp }) {
           custom={0.1}
           className="space-y-7"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-800/30 dark:border-cyan-400/30 bg-cyan-800/10 dark:bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-600 dark:text-cyan-300">
             <Code2 size={14} />
             Available for opportunities
           </div>
 
           <div className="space-y-4">
-            <p className="text-lg font-medium text-slate-300">Hi, I&apos;m</p>
-            <h1 className="max-w-2xl text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl lg:text-6xl">
+            <p className="text-lg font-medium text-slate-600 dark:text-slate-300">Hi, I&apos;m</p>
+            <h1 className="max-w-2xl text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
               Mohammed Fashan
             </h1>
-            <h2 className="text-xl font-semibold text-cyan-500 sm:text-2xl">
+            <h2 className="text-xl font-semibold text-cyan-700 dark:text-cyan-500 sm:text-2xl">
               Software Engineer | Full Stack Developer
             </h2>
             <p className="max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
@@ -93,13 +93,13 @@ export default function Hero({ fadeUp }) {
           <div className="rounded-[30px] w-fit border border-white/20 bg-white/70 p-4 shadow-2xl shadow-slate-900/10 backdrop-blur-xl dark:border-white/5 dark:bg-slate-900/70 sm:p-6">
             <div className="space-y-4 w-fit">
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white">Engineer</span>
-                <span className="text-xs text-cyan-100">2026</span>
+                <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-slate-600 dark:text-white">Engineer</span>
+                <span className="text-xs text-cyan-500 dark:text-cyan-100">2026</span>
               </div>
 
               <div className="rounded-3xl border border-white/10 bg-slate-950/60 shadow-lg shadow-slate-900/20">
                 <img
-                  src={assets.darkModeImage}
+                  src={`${theme === 'dark' ? assets.darkModeImage : assets.lightModeImage}`}
                   alt="Profile"
                   className="h-80 w-60 object-cover object-center sm:h-105"
                 />
@@ -109,15 +109,17 @@ export default function Hero({ fadeUp }) {
         </motion.div>
 
        
+       
       </div>
-       <motion.div classname="mt-10 rounded-[28px] border border-slate-200 bg-white/70 p-6 shadow-xl shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900/60"
+
+      <div classname="mt-10 rounded-[28px] border border-slate-200 bg-white/70 p-6 px-10 shadow-xl shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900/60"
         initial="hidden"
         whileInView="visible">
-                <div className="space-y-4 grid gap-6 sm:grid-cols-3 p-5">
+            <div className="space-y-4 grid gap-6 grid-cols-[2.4fr_1fr_1fr] sm:grid-cols-3 p-5">
                 <div className="rounded-3xl  border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/70">
                 
                   <h3 className="text-2xl font-bold">Full-Stack</h3>
-                  <p className="text-sm text-cyan-100">Building polished software experiences with scalable architecture.</p>
+                  <p className="text-sm text-slate-600">Building polished software experiences with scalable architecture.</p>
                 
                 </div>
 
@@ -136,7 +138,8 @@ export default function Hero({ fadeUp }) {
                   <p className="text-sm text-slate-600 dark:text-slate-300">React, Tailwind, Node.js, Django, PostgreSQL, and cloud-ready delivery habits.</p>
                 </div>
               </div>
-        </motion.div>
+        </div>
+       
     </section>
   )
 }

@@ -9,7 +9,6 @@ import Research from './components/Research'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import { useTheme } from './content/AppContext.jsx'
 
 const navItems = [
   { label: 'Home', hash: '#home' },
@@ -144,9 +143,14 @@ const fadeUp = {
 }
 
 function App() {
-  const {theme, setTheme} = useState();
+  const [theme, setTheme] = useState('dark')
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark')
+    document.documentElement.classList.toggle('light', theme === 'light')
+  }, [theme])
 
   useEffect(() => {
     const sections = navItems.map((item) => document.querySelector(item.hash)).filter(Boolean)
@@ -170,18 +174,18 @@ function App() {
   const year = useMemo(() => new Date().getFullYear(), [])
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+    <div className="min-h-screen bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
       <Navbar
         navItems={navItems}
+        activeSection={activeSection}
         theme={theme}
-        activeSection={activeSection}      
-        menuOpen={menuOpen}        
-        setMenuOpen={setMenuOpen}
+        menuOpen={menuOpen}
         setTheme={setTheme}
+        setMenuOpen={setMenuOpen}
       />
 
       <main>
-        <Hero fadeUp={fadeUp} />
+        <Hero fadeUp={fadeUp} theme={theme} />
         <AboutMe fadeUp={fadeUp} />
         <TechSkills skillGroups={skillGroups} fadeUp={fadeUp} />
         <Experience fadeUp={fadeUp} />

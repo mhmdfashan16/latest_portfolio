@@ -1,12 +1,11 @@
 import { Menu, Moon, Sun, X } from 'lucide-react'
-import { useTheme } from '../content/AppContext';
 
-export default function Navbar({ navItems, activeSection, menuOpen, setMenuOpen, theme, setTheme }) {
+export default function Navbar({ navItems, activeSection, theme, menuOpen, setTheme, setMenuOpen }) {
 
-  // const {theme, setTheme} = useTheme();
+  
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl dark:bg-white/20">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl dark:bg-slate-950/70">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#home" className="text-lg font-semibold tracking-wide text-white">
           Mohammed Fashan
