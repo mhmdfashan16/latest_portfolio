@@ -13,10 +13,10 @@ export default function AboutMe({ fadeUp }) {
           title="Software Engineering with product-minded execution"
           description="I am a software engineering graduate passionate about crafting dependable web systems, elegant interfaces, and practical user-first solutions."
         />
-        <div className="mt-10 flex flex-col items-center justify-center md:grid-cols-[0.25fr_1.01fr] gap-6 lg:grid-cols-[0.55fr_1.15fr]">
+        <div className="mt-10 flex flex-col items-center justify-center md:grid md:grid-cols-[0.25fr_1.01fr] gap-6 lg:grid-cols-[0.55fr_1.15fr]">
           <motion.div 
           whileHover={{ y: -4 }} 
-          className="rounded-[28px] lg:border w-55 h-60 md:w-70 md:h-full lg:h-100 lg:w-80 border-slate-200 bg-linear-to-br from-gray-300 via-gray-400 to-slate-400 p-6 shadow-xl shadow-slate-900/5 dark:border-slate-800 dark:bg-linear-to-br dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 ">
+          className="rounded-[28px] lg:border w-55 h-60 md:w-70 md:h-full lg:h-80 lg:w-80 border-slate-200 bg-linear-to-br from-gray-300 via-gray-400 to-slate-400 p-6 shadow-xl shadow-slate-900/5 dark:border-slate-800 dark:bg-linear-to-br dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 ">
             <div className="flex h-full min-h-20 max-h-100 rounded-[20px]  text-white">
                 <img src={assets.Hero_image_right} alt="Profile" 
                 className="h-full w-full rounded-[20px] object-cover" />

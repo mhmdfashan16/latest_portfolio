@@ -72,13 +72,13 @@ export default function Hero({ fadeUp }) {
           </div>
 
           <div className="flex items-center justify-center md:justify-start gap-3 pt-2 text-slate-700 dark:text-slate-200">
-            <a href="https://github.com" className="rounded-full border border-slate-300 p-3 transition hover:border-cyan-400 hover:text-cyan-400 dark:border-slate-700">
+            <a href="https://github.com/mhmdfashan16" className="rounded-full border border-slate-300 p-3 transition hover:border-cyan-400 hover:text-cyan-400 dark:border-slate-700">
               <GitBranch size={18} />
             </a>
-            <a href="https://linkedin.com" className="rounded-full border border-slate-300 p-3 transition hover:border-cyan-400 hover:text-cyan-400 dark:border-slate-700">
+            <a href="https://www.linkedin.com/in/mohammed-fashan-9b317a309/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BwB9VUQOnTZG2QK7shM4kNw%3D%3D" className="rounded-full border border-slate-300 p-3 transition hover:border-cyan-400 hover:text-cyan-400 dark:border-slate-700">
               <BriefcaseBusiness size={18} />
             </a>
-            <a href="mailto:mohammedfashan@example.com" className="rounded-full border border-slate-300 p-3 transition hover:border-cyan-400 hover:text-cyan-400 dark:border-slate-700">
+            <a href="mailto:mohammedfashan16@gmail.com" className="rounded-full border border-slate-300 p-3 transition hover:border-cyan-400 hover:text-cyan-400 dark:border-slate-700">
               <Mail size={18} />
             </a>
           </div>
