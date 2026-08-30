@@ -115,7 +115,7 @@ export default function Projects({ projects, fadeUp }) {
 
         <div className="project-marquee-wrapper mt-6">
           <div ref={marqueeRef} className="project-marquee">
-            <div className="project-marquee-track">
+            <div className="project-marquee-track mt-10">
               {[...projects, ...projects].map((project, index) => renderProjectCard(project, index))}
             </div>
           </div>
