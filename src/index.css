@@ -16,6 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -24,6 +28,7 @@ body {
     radial-gradient(circle at top left, rgba(34, 211, 238, 0.1), transparent 30%),
     radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.1), transparent 42%),
     #f8fafc;
+  overflow-x: hidden;
 }
 
 .dark body {
@@ -61,6 +66,72 @@ button {
 @layer base {
   a {
     @apply no-underline;
+  }
+}
+
+.typewriter-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(34, 211, 238, 0.9);
+  width: 0;
+  animation:
+    typing 2.8s steps(18, end) 0.4s forwards,
+    caret 0.8s step-end infinite 0.4s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.project-marquee-wrapper {
+  overflow: hidden;
+}
+
+.project-marquee {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.project-marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.project-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.project-card {
+  flex: 0 0 clamp(18rem, 25vw, 22rem);
+  width: clamp(18rem, 25vw, 22rem);
+  min-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-basis: 82vw;
+    width: 82vw;
+  }
+
+  .project-marquee-track {
+    gap: 1rem;
   }
 }
 

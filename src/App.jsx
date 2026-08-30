@@ -9,6 +9,7 @@ import Research from './components/Research'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import assets from './assets/assets.js'
 
 const navItems = [
   { label: 'Home', hash: '#home' },
@@ -41,7 +42,7 @@ const skillGroups = [
       { name: 'Node.js', level: 86 },
       { name: 'Express.js', level: 82 },
       { name: 'Django REST Framework', level: 78 },
-      { name: 'Spring Boot', level: 74 },
+      
     ],
   },
   {
@@ -69,6 +70,7 @@ const skillGroups = [
 const projects = [
   {
     name: 'BuildWith',
+    image: assets.buildWith,
     description: 'A collaborative platform that helps teams transform ideas into polished product plans and delivery roadmaps.',
     tech: ['React', 'Tailwind', 'Node.js'],
     features: ['Scalable UI', 'Real-time project tracking', 'Team collaboration'],
@@ -77,6 +79,7 @@ const projects = [
   },
   {
     name: 'Invito',
+    image: assets.invito,
     description: 'An event invitation and RSVP experience designed for a smooth and modern guest management workflow.',
     tech: ['React', 'Express', 'PostgreSQL'],
     features: ['RSVP flows', 'Custom invite cards', 'Responsive layouts'],
@@ -85,6 +88,7 @@ const projects = [
   },
   {
     name: 'Dart',
+    image: assets.buildWith,
     description: 'A sleek product analytics dashboard centered on business performance insights and actionable trends.',
     tech: ['React', 'Django', 'MySQL'],
     features: ['Interactive data view', 'Report dashboards', 'Performance insights'],
@@ -93,6 +97,7 @@ const projects = [
   },
   {
     name: 'eSabraHub',
+    image: assets.buildWith,
     description: 'A feature-rich marketplace portal designed to streamline service discovery, booking, and customer engagement.',
     tech: ['Spring Boot', 'MongoDB', 'Tailwind'],
     features: ['Marketplace UX', 'Service catalogs', 'Admin controls'],
@@ -101,6 +106,7 @@ const projects = [
   },
   {
     name: 'TutorTrack',
+    image: assets.buildWith,
     description: 'A scheduling and learning management tool for educators and students with a strong user experience focus.',
     tech: ['React', 'Node.js', 'MongoDB'],
     features: ['Session planning', 'Student progress tracking', 'Notifications'],
@@ -109,6 +115,7 @@ const projects = [
   },
   {
     name: 'FreshlyCart',
+    image: assets.shareWithMe,
     description: 'A polished e-commerce storefront with a visually strong shopping journey and modern responsive storefront design.',
     tech: ['React', 'Express', 'PostgreSQL'],
     features: ['Product discovery', 'Cart experience', 'Checkout UX'],
@@ -117,6 +124,7 @@ const projects = [
   },
   {
     name: 'FreshDose',
+    image: assets.invito,
     description: 'A wellness and health-focused solution built around curated recommendations and a smooth customer experience.',
     tech: ['React', 'Django', 'Tailwind'],
     features: ['Health dashboard', 'Personalized recommendations', 'Smart filtering'],
@@ -125,6 +133,34 @@ const projects = [
   },
   {
     name: 'Inventory Management System',
+    image: assets.invito,
+    description: 'A resilient inventory and logistics management system that improves stock visibility across operations.',
+    tech: ['Spring Boot', 'PostgreSQL', 'Docker'],
+    features: ['Stock management', 'Low inventory alerts', 'Role-based access'],
+    github: 'https://github.com',
+    demo: 'https://example.com',
+  },
+  {
+    name: 'Freshly Cart',
+    image: assets.invito,
+    description: 'A resilient inventory and logistics management system that improves stock visibility across operations.',
+    tech: ['Spring Boot', 'PostgreSQL', 'Docker'],
+    features: ['Stock management', 'Low inventory alerts', 'Role-based access'],
+    github: 'https://github.com',
+    demo: 'https://example.com',
+  },
+  {
+    name: 'Fast Auth',
+    image: assets.invito,
+    description: 'A secure and efficient authentication solution for modern web applications.',
+    tech: ['React', 'Node.js', 'MongoDB'],
+    features: ['User authentication', 'Role-based access control', 'Session management'],
+    github: 'https://github.com',
+    demo: 'https://example.com',
+  },
+  {
+    name: 'Feastify',
+    image: assets.invito,
     description: 'A resilient inventory and logistics management system that improves stock visibility across operations.',
     tech: ['Spring Boot', 'PostgreSQL', 'Docker'],
     features: ['Stock management', 'Low inventory alerts', 'Role-based access'],
@@ -185,7 +221,7 @@ function App() {
       />
 
       <main>
-        <Hero fadeUp={fadeUp} theme={theme} />
+        <Hero fadeUp={fadeUp} />
         <AboutMe fadeUp={fadeUp} />
         <TechSkills skillGroups={skillGroups} fadeUp={fadeUp} />
         <Experience fadeUp={fadeUp} />
