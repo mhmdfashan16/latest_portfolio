@@ -119,19 +119,39 @@ button {
 }
 
 .project-card {
-  flex: 0 0 clamp(18rem, 25vw, 22rem);
+  flex: 0 0 clamp(18rem, 45vw, 23rem);
   width: clamp(18rem, 25vw, 22rem);
   min-height: 100%;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .project-card {
-    flex-basis: 82vw;
+    flex-basis: 30vw;
     width: 82vw;
   }
 
   .project-marquee-track {
-    gap: 1rem;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-basis: 45vw;
+    width: 82vw;
+  }
+
+  .project-marquee-track {
+    gap: 1.1rem;
+  }
+}
+@media (max-width: 650px) {
+  .project-card {
+    flex-basis: 90vw;
+    width: 82vw;
+  }
+
+  .project-marquee-track {
+    gap: 1.1rem;
   }
 }
 

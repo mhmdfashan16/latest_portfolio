@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, ExternalLink, GitBranch, MoveRight } from 'lucide-react'
-import { useRef, useState } from 'react'
+import { useRef, useState ,useEffect} from 'react'
 import SectionHeader from './SectionHeader'
 
 export default function Projects({ projects, fadeUp }) {
   const marqueeRef = useRef(null)
-  const visibleCount = 3
+  const [visibleCount, setVisibleCount] = useState(1)
+  
   const [currentIndex, setCurrentIndex] = useState(0)
   const totalProjects = projects.length
   const maxIndex = Math.max(0, totalProjects - visibleCount)
@@ -38,6 +39,23 @@ export default function Projects({ projects, fadeUp }) {
 
     setCurrentIndex(newIndex)
   }
+
+  useEffect(() => {
+  const updateCount = () => {
+    if (window.innerWidth >= 1024) {
+      setVisibleCount(3); // lg
+    } else if (window.innerWidth >= 768) {
+      setVisibleCount(2); // md
+    } else {
+      setVisibleCount(1); // sm/mobile
+    }
+  };
+
+  updateCount();
+  window.addEventListener("resize", updateCount);
+
+  return () => window.removeEventListener("resize", updateCount);
+}, []);
 
   const renderProjectCard = (project, index) => (
     <motion.article
