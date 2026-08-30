@@ -23,16 +23,16 @@ export default function Hero({ fadeUp }) {
           animate="visible"
           variants={fadeUp}
           custom={0.1}
-          className="space-y-7"
+          className=" space-y-7 flex flex-col justify-center items-center md:items-start"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-800/30 dark:border-cyan-400/30 bg-cyan-800/10 dark:bg-cyan-500/10 px-3 py-1 lg:text-xs text-xs font-semibold uppercase tracking-[0.25em] text-cyan-600 dark:text-cyan-300">
+          <div className="inline-flex  items-center gap-2 w-fit rounded-full border border-cyan-800/30 dark:border-cyan-400/30 bg-cyan-800/10 dark:bg-cyan-500/10 px-3 py-1 lg:text-xs text-[8px] font-semibold uppercase tracking-[0.25em] text-cyan-600 dark:text-cyan-300">
             <Code2 size={14} />
             Available for opportunities
           </div>
 
-          <div className="md:space-y-4 space-y-2">
+          <div className="flex flex-col justify-center items-center md:items-start md:space-y-4 space-y-2">
             <p className="text-lg font-medium text-slate-600 dark:text-slate-300">Hi, I&apos;m</p>
-            <h1 className="typewriter-text max-w-2xl text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
+            <h1 className="sm:typewriter-text max-w-2xl text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
               Mohammed Fashan
             </h1>
             <motion.h2
@@ -43,12 +43,11 @@ export default function Hero({ fadeUp }) {
             >
               Software Engineer | Full Stack Developer
             </motion.h2>
-            <p className="max-w-2xl md:text-base text-sm leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
-              I build scalable, responsive, and user-focused web applications using modern technologies.
-            </p>
+            <p className="max-w-2xl  md:text-base text-sm leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
+                I build scalable, responsive, and user-focused web applications using modern technologies and industry best practices efficiently.            </p>
           </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="flex flex-col gap-3 w-full sm:flex-row sm:flex-wrap">
             <a
               href="#projects"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:bg-cyan-400 sm:w-auto"
